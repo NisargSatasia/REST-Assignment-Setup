@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting Up for REST Assignment on macOS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Setting Up for REST Assignment on macOS</h1>
+
+    <!-- Step 1: Installing Node.js -->
+    <div id="step1" class="step">
+      <h2>1. Install Node.js</h2>
+      <p><strong>Why is Node.js Important?</strong><br>Node.js is essential because it allows you to run your PetRESTServer.js, which is a Node.js server. It also includes npm, a package manager that helps manage your project dependencies.</p>
+      <p><strong>Preferred Method: Install via Installer</strong></p>
+      <p>1. Go to the <a href="https://nodejs.org" target="_blank">Node.js website</a> and download the macOS installer (LTS version is recommended for stability).</p>
+      <p>2. After downloading, you will get a .pkg file. Double-click the file to start the installation process.</p>
+      <p>3. Follow the on-screen instructions to install both Node.js and npm.</p>
+      <p>4. Once the installation is complete, verify the installation by opening your terminal (press Cmd + Space, type "Terminal") and running:</p>
+      <pre><code>node -v</code></pre>
+      <p>5. This will display the installed Node.js version. Similarly, check the npm version by running:</p>
+      <pre><code>npm -v</code></pre>
+    </div>
+
+    <!-- Step 2: Installing VSCode -->
+    <div id="step2" class="step hidden">
+      <h2>2. Install Visual Studio Code (VSCode)</h2>
+      <p><strong>Why use VSCode?</strong><br>VSCode is a lightweight but powerful code editor that offers excellent features for development, including built-in Git support and a marketplace for extensions.</p>
+      <p><strong>Steps to Install VSCode</strong></p>
+      <p>1. Download VSCode from the <a href="https://code.visualstudio.com/" target="_blank">VSCode website</a>.</p>
+      <p>2. Open the .zip file, then move Visual Studio Code to your Applications folder.</p>
+      <p>3. Launch VSCode by pressing Cmd + Space and typing "Visual Studio Code" or by navigating to the Applications folder and clicking on it.</p>
+    </div>
+
+    <!-- Step 3: Installing Live Server extension in VSCode -->
+    <div id="step3" class="step hidden">
+      <h2>3. Install Live Server Extension in VSCode</h2>
+      <p><strong>Why Live Server?</strong><br>The Live Server extension allows you to run your HTML files locally and see real-time updates in your browser as you make changes to the code.</p>
+      <p><strong>Steps to Install Live Server</strong></p>
+      <p>1. Open VSCode.</p>
+      <p>2. Press Cmd + Shift + X to open the Extensions Marketplace.</p>
+      <p>3. In the search bar, type "Live Server" and press Enter.</p>
+      <p>4. Find the Live Server extension by Ritwick Dey and click Install.</p>
+      <p>Here is what the extension looks like in the Marketplace:</p>
+      <!-- Image showing the Live Server extension in VSCode -->
+      <img src="live-server-extension.png" alt="Live Server Extension in VSCode" />
+    </div>
+
+    <!-- Step 4: Running the Pet REST Server -->
+    <div id="step4" class="step hidden">
+      <h2>4. Running the Pet REST Server</h2>
+      <p><strong>Why is running the server important?</strong><br>Running your server locally allows you to test your backend (Node.js) without deploying it to a remote environment.</p>
+      <p><strong>Steps to Run the Server</strong></p>
+      <p>1. Open a terminal inside VSCode by going to <strong>Terminal => New Terminal</strong> or pressing <strong>Ctrl + `</strong>('`' is found directly below the esc button on top right corener of your keyboard).</p>
+      <p>2. Navigate to the directory where your <code>PetRESTServer.js</code> is located by running:</p>
+      <pre><code>cd /path/to/your/server</code></pre>
+      <p>3. Start the server by running:</p>
+      <pre><code>node PetRESTServer.js</code></pre>
+      <p>4. You should see an output similar to this:</p>
+      <pre><code>Server running at http://127.0.0.1:8000/</code></pre>
+    </div>
+
+    <!-- Step 5: Installing Postman (optional) -->
+    <div id="step5" class="step hidden">
+      <h2>5. Install Postman (Optional)</h2>
+      <p><strong>Why use Postman?</strong><br>Postman is a powerful tool that allows you to test your API endpoints without needing to interact with the front-end. It's great for verifying your API logic.</p>
+      <p><strong>Steps to Install Postman</strong></p>
+      <p>1. Download Postman from the <a href="https://www.postman.com/" target="_blank">Postman website</a>.</p>
+      <p>2. Open the downloaded .dmg file and drag the Postman app into your Applications folder.</p>
+      <p>3. Launch Postman by pressing Cmd + Space and typing "Postman" or by finding it in the Applications folder.</p>
+      <p>4. Test your server by creating a new request in Postman. Enter the URL <code>http://127.0.0.1:8000</code> and choose the appropriate HTTP method (GET, POST, DELETE, etc.).</p>
+    </div>
+
+    <!-- Step 6: Using VSCode and running the Live Server -->
+    <div id="step6" class="step hidden">
+      <h2>6. Using VSCode to Edit and Test Code</h2>
+      <p><strong>Best Practices for Using VSCode:</strong><br>
+      Now that everything is set up, you are ready to develop your project. Here are some best practices to follow:</p>
+      <ul>
+        <li>Use VSCode to edit your JavaScript and HTML files.</li>
+        <li>Utilize the Live Server extension to see real-time updates as you modify your front-end code.</li>
+        <li>Keep your Node.js server running while developing so you can test the backend and frontend flow.</li>
+      </ul>
+    
+      <h3>How to Run the Live Server:</h3>
+      <p>The Live Server can be run by using a convenient button located in the bottom right corner of VSCode. Follow these steps to start and stop the server:</p>
+    
+      <ol>
+        <li>Make sure you have your HTML file open in VSCode.</li>
+        <li>Look at the bottom right corner of VSCode for a button labeled "<strong>Go Live</strong>". Click this button to start the Live Server, as shown in the image below:</li>
+        <!-- Image showing how to run the Live Server -->
+        <img src="how-to-run-live-server.png" alt="Click to run Live Server in VSCode" />
+    
+        <li>Once the server is running, you can view your project by opening the local server URL (usually something like <code>http://127.0.0.1:5500</code>).</li>
+    
+        <li>When you are done and want to stop the server, go back to the bottom right corner of VSCode and click the "<strong>Port : 5500</strong>" button to close the server, as shown in the image below:</li>
+        <!-- Image showing how to stop the Live Server -->
+        <img src="how-to-close-live-server.png" alt="Click to stop Live Server in VSCode" />
+      </ol>
+    </div>
+    
+
+    <div class="navigation">
+      <button id="prevBtn" class="btn" onclick="prevStep()" disabled>Previous</button>
+      <button id="nextBtn" class="btn" onclick="nextStep()">Next</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
